@@ -1,15 +1,24 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-/**
- * Variables
- */
+    <style>
+        header{
+            padding: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
 
-$name = 'BrianOtieno12';
-
-//variables can be nested inside a string when using double quotes
-echo "Hello, $name"."<br/>";
-
-echo "Hello, {$name}"."<br/>";
-
-//Variables are concatenated when using single quotes
-echo 'Hello, ' . $name;
+<header>
+    <!-- specialchars is a php built-in function -->
+    <?= 'Hello ' . htmlspecialchars($_GET['name']);?>
+</header>
+    
+</body>
+</html>
