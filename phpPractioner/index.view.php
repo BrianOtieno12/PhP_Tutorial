@@ -8,15 +8,32 @@
 
     <style>
         header{
-            padding: 2em;
-            text-align: center;
+            /* padding: 2em;
+            text-align: center; */
         }
     </style>
 </head>
 <body>
 
 <header>
-    <?= $greeting; ?>
+    <ul>
+        {# Option 1 #}
+        <?php 
+            foreach ($names as $name) {
+               echo "<li>$name</li>";
+            }
+        ?>
+
+        <br>
+
+        {# Option 2 #}
+
+        <?php foreach($names as $name):?>
+
+            <li><?= $name ;?></li>
+            
+        <?php endforeach ;?>
+    </ul>
 </header>
     
 </body>
