@@ -16,23 +16,23 @@
 <body>
 
 <header>
+    {# Example 1 #}
+    <p>Today's Task</p>
     <ul>
-        {# Option 1 #}
-        <?php 
-            foreach ($names as $name) {
-               echo "<li>$name</li>";
-            }
-        ?>
+        <?php foreach($task as $heading => $val):?>
+            <li><?=ucwords($heading)?>: <?=$val?></li>
+       <?php endforeach ?>
+    </ul>
+    
+    <br>
 
-        <br>
-
-        {# Option 2 #}
-
-        <?php foreach($names as $name):?>
-
-            <li><?= $name ;?></li>
-            
-        <?php endforeach ;?>
+    {# Example 2 #}
+    <p>Today's Task</p>
+    <ul>
+        <li><?=$task['title']?></li>
+        <li><?=$task['assigned']?></li>
+        <li><?=$task['due']?></li>
+        <li><?=($task['completed'])?'completed':'Incomplete'?></li>
     </ul>
 </header>
     

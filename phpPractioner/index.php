@@ -2,10 +2,11 @@
 
 //Arrays = collection of related data
 
-$names = [
-    'John',
-    'Mary',
-    'Brian'
+$task = [
+    'title' => 'Tech Support',
+    'assigned' => 'John Doe',
+    'due' => 'today',
+    'completed' => true,
 ];
 
 require 'index.view.php';
